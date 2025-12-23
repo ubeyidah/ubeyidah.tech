@@ -34,7 +34,7 @@ const Hero = () => {
             <span className="text-amber-300 font-mono">Ubeyid Oumer</span>
           </h1>
           <h1 className="text-lg opacity-80 py-1">
-            A Self-Thought Creative Web & Mobile App Developer.
+            A Self-Thought Creative Developer.
           </h1>
           <div className="flex gap-3 items-center justify-center mt-3">
             <Link
