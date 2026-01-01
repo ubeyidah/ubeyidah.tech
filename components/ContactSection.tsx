@@ -46,10 +46,10 @@ const contactItems = [
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-12">
-      <h2 className="text-3xl font-bold mb-1 font-sans italic">Let&apos;s Connect</h2>
+    <section id="contact" className="py-6 md:py-12">
+      <h2 className="text-2xl md:text-3xl font-bold mb-1 font-sans italic">Let&apos;s Connect</h2>
       <p className="text-muted-foreground mb-8">Reach out through email or find me on social media</p>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 max-w-4xl mx-auto">
         {contactItems.map((contact, index) => {
           const isLarge = contact.size === "large";
 
@@ -67,7 +67,7 @@ export default function ContactSection() {
                 ${contact.size === "small" ? "md:col-span-1" : ""}
               `}
             >
-              <div className="relative p-6 h-full min-h-40 flex flex-col justify-between">
+              <div className="relative p-4 md:p-6 h-full min-h-40 flex flex-col justify-between">
                 {/* Background Icon */}
                 <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity duration-700">
                   <HugeiconsIcon

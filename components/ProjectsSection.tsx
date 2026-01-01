@@ -138,12 +138,12 @@ export default function ProjectsSection() {
       <p className="text-muted-foreground mb-8">Real-world projects with real users</p>
       <div>
         {projects.map((project, index) => (
-          <div key={project.id} className="flex gap-8 items-start border border-muted/30 rounded-lg p-5 my-4 hover:opacity-90 transition-opacity duration-500 relative">
+          <div key={project.id} className="flex flex-col md:flex-row gap-8 items-start border border-muted/30 rounded-lg p-5 my-4 hover:opacity-90 transition-opacity duration-500 relative">
             <Badge variant="secondary" className="absolute top-0 right-0 rounded capitalize rounded-tr-lg bg-border/40">{project.type}</Badge>
             {index < projects.length - 1 && (
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-px h-4 bg-linear-to-b from-muted/50 to-transparent"></div>
             )}
-            <div className="shrink-0 w-80 h-48 bg-muted rounded-lg flex items-center justify-center relative overflow-hidden group">
+            <div className="shrink-0 w-full md:w-80 h-48 bg-muted rounded-lg flex items-center justify-center relative overflow-hidden group">
               <Image src={project.image} alt={project.title} width={400} height={200} className="w-full h-full object-cover" />
               <div className="absolute bottom-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <Button size="sm" variant="outline" className="border-4 bg-background" asChild disabled={project.githubPrivate}>

@@ -14,11 +14,11 @@ const articles = [
 
 export default function LatestArticlesSection() {
   return (
-    <section className="py-12">
-      <h2 className="text-3xl font-bold mb-2 font-sans italic">Latest Articles</h2>
+    <section className="py-6 md:py-12">
+      <h2 className="text-2xl md:text-3xl font-bold mb-2 font-sans italic">Latest Articles</h2>
       <p className="text-muted-foreground mb-8">Insights from my development journey</p>
-      <article className="rounded-xl border bg-linear-to-br from-background to-muted/10 border-muted/30 p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-        <h3 className="text-2xl font-semibold mb-3 leading-tight">
+      <article className="rounded-xl border bg-linear-to-br from-background to-muted/10 border-muted/30 p-4 md:p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+        <h3 className="text-xl md:text-2xl font-semibold mb-3 leading-tight">
           <a
             href={articles[0].link}
             className="hover:text-primary transition-colors"
