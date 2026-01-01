@@ -16,22 +16,22 @@ export default function Page() {
       <AnimatedSection>
         <HeroSection />
       </AnimatedSection>
-      <AnimatedSection delay={200}>
+      <AnimatedSection delay={100}>
         <AboutSection />
       </AnimatedSection>
-      <AnimatedSection delay={400}>
+      <AnimatedSection delay={200}>
         <GitHubGraph />
       </AnimatedSection>
-      <AnimatedSection delay={600}>
+      <AnimatedSection delay={300}>
         <ProjectsSection />
       </AnimatedSection>
-      <AnimatedSection delay={800}>
+      <AnimatedSection delay={400}>
         <LatestArticlesSection />
       </AnimatedSection>
-      <AnimatedSection delay={1000}>
+      <AnimatedSection delay={600}>
         <ContactSection />
       </AnimatedSection>
-      <AnimatedSection delay={1200}>
+      <AnimatedSection delay={800}>
         <Footer />
       </AnimatedSection>
       <FixedInput />

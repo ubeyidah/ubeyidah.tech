@@ -325,16 +325,12 @@ export const ContributionGraphBlock = ({
     );
   }
 
+  const levelColor = `var(--primary-level${activity.level})`;
+  const fillOpacity = activity.level === 0 ? 0.2 : 1;
+
   return (
     <rect
-      className={cn(
-        'data-[level="0"]:fill-muted',
-        'data-[level="1"]:fill-muted-foreground/20',
-        'data-[level="2"]:fill-muted-foreground/40',
-        'data-[level="3"]:fill-muted-foreground/60',
-        'data-[level="4"]:fill-muted-foreground/80',
-        className
-      )}
+      className={cn("stroke-[1px] stroke-border", className)}
       data-count={activity.count}
       data-date={activity.date}
       data-level={activity.level}
@@ -344,6 +340,7 @@ export const ContributionGraphBlock = ({
       width={blockSize}
       x={(blockSize + blockMargin) * weekIndex}
       y={labelHeight + (blockSize + blockMargin) * dayIndex}
+      style={{ fill: levelColor, fillOpacity, strokeOpacity: 0.3 }}
       {...props}
     />
   );
@@ -492,19 +489,13 @@ export const ContributionGraphLegend = ({
           <svg height={blockSize} key={level} width={blockSize}>
             <title>{`${level} contributions`}</title>
             <rect
-              className={cn(
-                "stroke-[1px] stroke-border",
-                'data-[level="0"]:fill-muted',
-                'data-[level="1"]:fill-muted-foreground/20',
-                'data-[level="2"]:fill-muted-foreground/40',
-                'data-[level="3"]:fill-muted-foreground/60',
-                'data-[level="4"]:fill-muted-foreground/80'
-              )}
+              className="stroke-[1px] stroke-border"
               data-level={level}
               height={blockSize}
               rx={blockRadius}
               ry={blockRadius}
               width={blockSize}
+              style={{ fill: `var(--primary-level${level})`, fillOpacity: level === 0 ? 0.2 : 1, strokeOpacity: 0.3 }}
             />
           </svg>
         )

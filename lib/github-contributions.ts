@@ -1,6 +1,12 @@
 
 import { unstable_cache } from "next/cache";
 
+type Contribution = {
+  date: string;
+  count: number;
+  level: number;
+};
+
 export const getGithubContributions = unstable_cache(
   async () => {
     const username = "ubeyidah";
@@ -12,10 +18,14 @@ export const getGithubContributions = unstable_cache(
     const res = await fetch(url);
     const data = await res.json();
 
-    const year = new Date().getFullYear();
+    const lastYear = new Date().getFullYear() - 1;
+    const filteredContributions = data.contributions.filter(
+      (contribution: Contribution) => contribution.date.startsWith(`${lastYear}-`)
+    );
+
     return {
-      contributions: data.contributions,
-      total: data.total[year],
+      contributions: filteredContributions,
+      total: data.total[lastYear],
     };
   },
   ["github-contributions-ubeyidah"],

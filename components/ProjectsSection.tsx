@@ -6,20 +6,44 @@ import Image from "next/image";
 
 const projects = [
   {
-    id: 1,
-    title: "Project One",
-    description: "A modern web application built with Next.js and TypeScript. Features include user authentication, real-time updates, and responsive design.",
-    image: "/project1.jpg",
-    technologies: [
-      { name: "Next.js", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/nextjs-dark.svg" },
-      { name: "TypeScript", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/typescript.svg" },
-      { name: "Tailwind CSS", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/tailwindcss-dark.svg" },
-      { name: "Prisma", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/prisma.svg" }
+    "id": 1,
+    "title": "dLog",
+    "description": "A minimalist daily reflection and self-improvement tracker. Built to help users capture daily memories, moods, and progress with discipline and intentionality. Features include quick log entry, mood tracking, tag-based organization, and insightful stats for growth.",
+    "image": "/projects/dlog.png",
+    "technologies": [
+      {
+        "name": "Next.js",
+        "icon": "https://github.com/onemarc/tech-icons/raw/main/icons/nextjs-dark.svg"
+      },
+      {
+        "name": "TypeScript",
+        "icon": "https://github.com/onemarc/tech-icons/raw/main/icons/typescript.svg"
+      },
+      {
+        "name": "Tailwind CSS",
+        "icon": "https://github.com/onemarc/tech-icons/raw/main/icons/tailwindcss-dark.svg"
+      },
+      {
+        "name": "tRPC",
+        "icon": "https://github.com/onemarc/tech-icons/raw/main/icons/trpcbun.svg"
+      },
+      {
+        "name": "Prisma",
+        "icon": "https://github.com/onemarc/tech-icons/raw/main/icons/prisma.svg"
+      },
+      {
+        "name": "Shadcn/ui",
+        "icon": "https://github.com/onemarc/tech-icons/raw/main/icons/shadcnui.svg"
+      },
+      {
+        "name": "Bun",
+        "icon": "https://github.com/onemarc/tech-icons/raw/main/icons/bun.svg"
+      }
     ],
-    github: "https://github.com/ubeyidah/project-one",
-    githubPrivate: false,
-    live: "https://project-one.vercel.app",
-    livePrivate: true,
+    "github": "https://github.com/ubeyidah/dlog",
+    "githubPrivate": false,
+    "live": "https://dlog.live",
+    "livePrivate": false
   },
   {
     id: 2,
@@ -99,7 +123,7 @@ export default function ProjectsSection() {
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-px h-4 bg-gradient-to-b from-muted/50 to-transparent"></div>
             )}
             <div className="shrink-0 w-80 h-48 bg-muted rounded-lg flex items-center justify-center relative overflow-hidden group">
-              <span className="text-muted-foreground">Project Image</span>
+              <Image src={project.image} alt={project.title} width={400} height={200} className="w-full h-full" />
               <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-4">
                 <a
                   href={project.github}
@@ -128,10 +152,10 @@ export default function ProjectsSection() {
               <h3 className="text-lg font-semibold mb-1">{project.title}</h3>
               <p className="text-muted-foreground mb-6 leading-relaxed text-sm">{project.description}</p>
 
-              <div className="relative h-20 mb-6">
-                <div className="flex flex-col gap-0 group/stack absolute left-0">
-                  {project.technologies.slice(0, 6).map((tech, index) => (
-                    <div key={tech.name} className="w-8 h-8 rounded-full overflow-hidden border border-muted-foreground/20 transition-all duration-300 group-hover/stack:translate-x-4 group-hover/stack:scale-110" style={{ transform: `translateY(${index * -6}px)` }}>
+              <div className="">
+                <div className="flex mt-auto gap-2">
+                  {project.technologies.slice(0, 6).map((tech) => (
+                    <div key={tech.name} className="w-5 h-5">
                       <Image
                         src={tech.icon}
                         alt={tech.name}
@@ -142,7 +166,7 @@ export default function ProjectsSection() {
                     </div>
                   ))}
                   {project.technologies.length > 6 && (
-                    <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center text-xs font-bold border border-muted-foreground/20 transition-all duration-300 group-hover/stack:translate-x-4 group-hover/stack:scale-110" style={{ transform: `translateY(${Math.min(6, project.technologies.length) * -6}px)` }}>
+                    <div className="w-6 h-6 rounded-full overflow-hidden border border-muted-foreground/20 transition-all duration-300 group-hover/stack:translate-x-4 group-hover/stack:scale-110 flex itecems-center justify-center bg-muted text-xs font-medium text-muted-foreground">
                       +
                     </div>
                   )}
