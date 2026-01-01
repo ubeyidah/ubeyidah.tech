@@ -46,7 +46,7 @@ const contactItems = [
 
 export default function ContactSection() {
   return (
-    <section className="py-12">
+    <section id="contact" className="py-12">
       <h2 className="text-3xl font-bold mb-1 font-sans italic">Let&apos;s Connect</h2>
       <p className="text-muted-foreground mb-8">Reach out through email or find me on social media</p>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">

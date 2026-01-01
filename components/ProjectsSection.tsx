@@ -133,7 +133,7 @@ const projects = [
 export default function ProjectsSection() {
 
   return (
-    <section className="py-12">
+    <section id="projects" className="py-12">
       <h2 className="text-3xl font-bold mb-2 font-sans italic">What I’m Building</h2>
       <p className="text-muted-foreground mb-8">Real-world projects with real users</p>
       <div>
