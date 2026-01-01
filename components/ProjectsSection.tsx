@@ -7,7 +7,7 @@ import Image from "next/image";
 const projects = [
   {
     "id": 1,
-    "title": "dLog",
+    "title": "DLog",
     "description": "A minimalist daily reflection and self-improvement tracker. Built to help users capture daily memories, moods, and progress with discipline and intentionality. Features include quick log entry, mood tracking, tag-based organization, and insightful stats for growth.",
     "image": "/projects/dlog.png",
     "technologies": [
@@ -35,6 +35,7 @@ const projects = [
         "name": "Shadcn/ui",
         "icon": "https://github.com/onemarc/tech-icons/raw/main/icons/shadcnui.svg"
       },
+      { name: "Better Auth", icon: "https://raw.githubusercontent.com/betterauth/betterauth/main/assets/betterauth-icon.svg" },
       {
         "name": "Bun",
         "icon": "https://github.com/onemarc/tech-icons/raw/main/icons/bun.svg"
@@ -47,66 +48,77 @@ const projects = [
   },
   {
     id: 2,
-    title: "Project Two",
-    description: "Full-stack application with React frontend and Node.js backend. Implements RESTful APIs, database integration, and modern UI components.",
-    image: "/project2.jpg",
+    title: "Clario",
+    description: "A user-focused LMS that streamlines course creation, student enrollment, and day-to-day learning. Instructors can publish courses, manage rosters, and send notifications; students access interactive lessons, track progress, and view analytics to improve outcomes.",
+    image: "/projects/clario.png",
     technologies: [
+      { name: "Next.js", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/nextjs-dark.svg" },
       { name: "React", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/react-dark.svg" },
-      { name: "Node.js", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/nodejs-dark.svg" },
-      { name: "MongoDB", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/mongodb.svg" },
-      { name: "Express", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/express.svg" }
+      { name: "TypeScript", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/typescript.svg" },
+      { name: "Tailwind CSS", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/tailwind-dark.svg" },
+      { name: "Prisma", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/prisma.svg" },
+      { name: "PostgreSQL", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/postgresql.svg" },
+      { name: "Zod", icon: "https://raw.githubusercontent.com/0x7b3/zod-icons/main/zod.svg" },
+      { name: "Resend", icon: "https://raw.githubusercontent.com/resendlhq/resend/main/docs/static/resend-black.svg" },
+      { name: "Better Auth", icon: "https://raw.githubusercontent.com/betterauth/betterauth/main/assets/betterauth-icon.svg" },
+      { name: "Arcjet", icon: "https://example.com/icons/arcjet.svg" }
     ],
-    github: "https://github.com/ubeyidah/project-two",
-    githubPrivate: true,
-    live: "https://project-two.herokuapp.com",
-    livePrivate: false,
+    github: "https://github.com/ubeyidah/clario",
+    githubPrivate: false,
+    live: "https://clario.pro.et",
+    livePrivate: false
   },
   {
     id: 3,
-    title: "Project Three",
-    description: "Mobile-responsive e-commerce platform with payment integration, product catalog, and admin dashboard.",
-    image: "/project3.jpg",
+    title: "Nviron",
+    description: "Lightweight, type-safe environment variable manager for modern JS/TS projects. Validates and safely accesses env variables with Zod.",
+    image: "/projects/nviron.png",
     technologies: [
-      { name: "Vue.js", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/vuejs.svg" },
-      { name: "Firebase", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/firebase.svg" },
-      { name: "Stripe", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/stripe.svg" },
-      { name: "SCSS", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/sass.svg" }
+      { name: "TypeScript", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/typescript.svg" },
+      { name: "Node.js", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/nodejs.svg" },
+      { name: "Zod", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/zod.svg" },
+      { name: "pnpm", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/pnpm.svg" },
+      { name: "Turborepo", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/vercel.svg" },
+      { name: "Vitest", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/vitest.svg" }
     ],
-    github: "https://github.com/ubeyidah/project-three",
+    github: "https://github.com/ubeyidah/nviron",
     githubPrivate: false,
-    live: "https://project-three.netlify.app",
+    live: "https://nviron.vercel.app",
     livePrivate: false,
   },
   {
     id: 4,
-    title: "Project Four",
-    description: "Data visualization dashboard built with D3.js and React. Features interactive charts, filters, and export functionality.",
-    image: "/project4.jpg",
+    title: "UnitWise Ethiopia",
+    description: "Grade 12 exam preparation platform for Ethiopian students. Study unit-wise lessons, practice past exams, take mock tests, and track learning progress.",
+    image: "/projects/unit-wise-ethiopia.png",
     technologies: [
       { name: "React", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/react-dark.svg" },
-      { name: "D3.js", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/d3.svg" },
-      { name: "Chart.js", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/chartjs.svg" },
-      { name: "Python", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/python-dark.svg" }
+      { name: "Node.js", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/nodejs.svg" },
+      { name: "Express.js", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/express.svg" },
+      { name: "MongoDB", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/mongodb.svg" },
+      { name: "npm", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/npm.svg" }
     ],
-    github: "https://github.com/ubeyidah/project-four",
+    github: "https://github.com/ubeyidah/unitwise-ethiopia",
     githubPrivate: true,
-    live: "https://project-four.vercel.app",
-    livePrivate: false,
+    live: null,
+    livePrivate: true,
   },
   {
     id: 5,
-    title: "Project Five",
-    description: "CLI tool for developers built with Rust. Provides utilities for code generation, file management, and productivity enhancements.",
-    image: "/project5.jpg",
+    title: "Contactify",
+    description: "Contactify is an accessibility-focused mobile app for elderly users that displays contacts as large, photo-based cards. Users can easily recognize people visually and swipe to call, making everyday communication simple and stress-free.",
+    image: "/projects/contactify.png",
     technologies: [
-      { name: "Rust", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/rust.svg" },
-      { name: "Terminal", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/terminal.svg" }
+      { name: "React Native", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/react-native.svg" },
+      { name: "TypeScript", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/typescript.svg" },
+      { name: "NativeWind", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/tailwindcss.svg" },
+      { name: "Node.js", icon: "https://github.com/onemarc/tech-icons/raw/main/icons/nodejs.svg" }
     ],
-    github: "https://github.com/ubeyidah/project-five",
+    github: "https://github.com/ubeyidah/contactify",
     githubPrivate: false,
     live: null,
-    livePrivate: false,
-  },
+    livePrivate: true,
+  }
 ];
 
 
@@ -123,7 +135,7 @@ export default function ProjectsSection() {
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-px h-4 bg-gradient-to-b from-muted/50 to-transparent"></div>
             )}
             <div className="shrink-0 w-80 h-48 bg-muted rounded-lg flex items-center justify-center relative overflow-hidden group">
-              <Image src={project.image} alt={project.title} width={400} height={200} className="w-full h-full" />
+              <Image src={project.image} alt={project.title} width={400} height={200} className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-4">
                 <a
                   href={project.github}
