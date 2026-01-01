@@ -1,13 +1,16 @@
 "use client";
 
 import { HugeiconsIcon } from "@hugeicons/react";
-import { Github01Icon, ExternalLink, LockIcon, ArrowRight01Icon } from "@hugeicons/core-free-icons";
+import { Github01Icon, ExternalLink, LockIcon } from "@hugeicons/core-free-icons";
 import Image from "next/image";
+import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
 
 const projects = [
   {
     "id": 1,
     "title": "DLog",
+    "type": "web app",
     "description": "A minimalist daily reflection and self-improvement tracker. Built to help users capture daily memories, moods, and progress with discipline and intentionality. Features include quick log entry, mood tracking, tag-based organization, and insightful stats for growth.",
     "image": "/projects/dlog.png",
     "technologies": [
@@ -49,6 +52,7 @@ const projects = [
   {
     id: 2,
     title: "Clario",
+    type: "web app",
     description: "A user-focused LMS that streamlines course creation, student enrollment, and day-to-day learning. Instructors can publish courses, manage rosters, and send notifications; students access interactive lessons, track progress, and view analytics to improve outcomes.",
     image: "/projects/clario.png",
     technologies: [
@@ -71,6 +75,7 @@ const projects = [
   {
     id: 3,
     title: "Nviron",
+    type: "library",
     description: "Lightweight, type-safe environment variable manager for modern JS/TS projects. Validates and safely accesses env variables with Zod.",
     image: "/projects/nviron.png",
     technologies: [
@@ -89,6 +94,7 @@ const projects = [
   {
     id: 4,
     title: "UnitWise Ethiopia",
+    type: "web app",
     description: "Grade 12 exam preparation platform for Ethiopian students. Study unit-wise lessons, practice past exams, take mock tests, and track learning progress.",
     image: "/projects/unit-wise-ethiopia.png",
     technologies: [
@@ -106,6 +112,7 @@ const projects = [
   {
     id: 5,
     title: "Contactify",
+    type: "mobile app",
     description: "Contactify is an accessibility-focused mobile app for elderly users that displays contacts as large, photo-based cards. Users can easily recognize people visually and swipe to call, making everyday communication simple and stress-free.",
     image: "/projects/contactify.png",
     technologies: [
@@ -127,41 +134,42 @@ export default function ProjectsSection() {
 
   return (
     <section className="py-12">
-      <h2 className="text-3xl font-bold mb-8 font-instrument-serif-italic">What I’m Building</h2>
-      <div className="border-t border-muted/30">
+      <h2 className="text-3xl font-bold mb-2 font-sans italic">What I’m Building</h2>
+      <p className="text-muted-foreground mb-8">Real-world projects with real users</p>
+      <div>
         {projects.map((project, index) => (
           <div key={project.id} className="flex gap-8 items-start border border-muted/30 rounded-lg p-5 my-4 hover:opacity-90 transition-opacity duration-500 relative">
+            <Badge variant="secondary" className="absolute top-0 right-0 rounded capitalize rounded-tr-lg bg-border/40">{project.type}</Badge>
             {index < projects.length - 1 && (
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-px h-4 bg-gradient-to-b from-muted/50 to-transparent"></div>
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-px h-4 bg-linear-to-b from-muted/50 to-transparent"></div>
             )}
             <div className="shrink-0 w-80 h-48 bg-muted rounded-lg flex items-center justify-center relative overflow-hidden group">
               <Image src={project.image} alt={project.title} width={400} height={200} className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-4">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`flex items-center gap-2 p-2 bg-white/20 rounded-full hover:bg-white/30 transition-colors ${project.githubPrivate ? 'pointer-events-none opacity-50' : ''}`}
-                >
-                  <HugeiconsIcon icon={project.githubPrivate ? LockIcon : Github01Icon} size={20} className={project.githubPrivate ? '' : 'group-hover:rotate-45 transition-transform duration-300'} />
-                  {!project.githubPrivate && <HugeiconsIcon icon={ArrowRight01Icon} size={12} className="group-hover:rotate-90 transition-transform duration-300" />}
-                </a>
-                {project.live && (
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`flex items-center gap-2 p-2 bg-white/20 rounded-full hover:bg-white/30 transition-colors ${project.livePrivate ? 'pointer-events-none opacity-50' : ''}`}
-                  >
-                    <HugeiconsIcon icon={project.livePrivate ? LockIcon : ExternalLink} size={20} className={project.livePrivate ? '' : 'group-hover:rotate-45 transition-transform duration-300'} />
-                    {!project.livePrivate && <HugeiconsIcon icon={ArrowRight01Icon} size={12} className="group-hover:rotate-90 transition-transform duration-300" />}
+              <div className="absolute bottom-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <Button size="sm" variant="outline" className="border-4 bg-background" asChild disabled={project.githubPrivate}>
+                  <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    <HugeiconsIcon icon={project.githubPrivate ? LockIcon : Github01Icon} size={16} />
                   </a>
+                </Button>
+                {project.live && (
+                  <Button size="sm" variant="outline" className="border-4 bg-background" asChild disabled={project.livePrivate}>
+                    <a href={project.live} target="_blank" rel="noopener noreferrer">
+                      <HugeiconsIcon icon={project.livePrivate ? LockIcon : ExternalLink} size={16} />
+                    </a>
+                  </Button>
                 )}
               </div>
             </div>
 
             <div className="flex-1">
-              <h3 className="text-lg font-semibold mb-1">{project.title}</h3>
+              <a
+                href={project.live || project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg font-semibold mb-1 hover:underline"
+              >
+                {project.title}
+              </a>
               <p className="text-muted-foreground mb-6 leading-relaxed text-sm">{project.description}</p>
 
               <div className="">
