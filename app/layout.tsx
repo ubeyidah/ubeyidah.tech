@@ -5,6 +5,7 @@ import Wrapper from "@/components/ui/wrapper";
 import { ThemeProvider } from "@/components/theme-provider";
 import { baseMetadata } from "@/lib/seo";
 import { PersonSchema } from "@/components/StructuredData";
+import { Analytics } from "@vercel/analytics/next"
 
 const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -41,6 +42,7 @@ export default function RootLayout({
         <ThemeProvider>
           <Wrapper>{children}</Wrapper>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
