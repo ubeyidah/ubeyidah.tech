@@ -11,7 +11,7 @@ import { AnimatedSection } from "@/components/animated-section";
 
 export default function Page() {
   return (
-    <div className="space-y-5">
+    <main className="space-y-5">
       <Header />
       <AnimatedSection>
         <HeroSection />
@@ -35,6 +35,6 @@ export default function Page() {
         <Footer />
       </AnimatedSection>
       <FixedInput />
-    </div>
+    </main>
   );
 }
