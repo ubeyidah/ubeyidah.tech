@@ -1,4 +1,4 @@
-# Ubeyidah.tech — Portfolio
+# Ubeyidah.tech Portfolio
 
 A minimal, fast personal portfolio showcasing projects, writing, and contact links.
 
