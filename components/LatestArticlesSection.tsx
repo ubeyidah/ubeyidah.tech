@@ -10,6 +10,14 @@ const articles = [
     readTime: "3 min read",
     link: "https://medium.com/@ubeyidah/the-best-way-to-learn-programming-is-when-you-actually-need-it-cddb4b4af0f5",
   },
+  {
+    id: 2,
+    title: "How SSS (Single Source Structure) Ended My Project Organization Nightmare",
+    excerpt: "You know that moment. You need to jump into that side project you started three months ago. You check your Desktop, nope. Documents folder? Not there either. Downloads? Why would it be in Downloads? But you check anyway because at this point, who knows.",
+    date: "2026-01-03",
+    readTime: "5 min read",
+    link: "https://medium.com/@ubeyidah/how-sss-single-source-structure-ended-my-project-organization-nightmare-c3edbd6f2774?postPublishedType=initial",
+  },
 ];
 
 export default function LatestArticlesSection() {
