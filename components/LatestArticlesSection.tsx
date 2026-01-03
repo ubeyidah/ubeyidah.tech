@@ -28,7 +28,7 @@ export default function LatestArticlesSection() {
       <h2 className="text-2xl md:text-3xl font-bold mb-2 font-sans italic">Latest Articles</h2>
       <p className="text-muted-foreground mb-8">Insights from my development journey</p>
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-6">
         {articles.map((article) => (
           <article
             key={article.id}
