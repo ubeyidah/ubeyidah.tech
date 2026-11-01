@@ -41,12 +41,12 @@ export default async function HobbySection() {
                 <span>Open to a game?</span>
               </div>
             </div>
-            <div className="border-t">
+            <div className="h-12 border-t">
               <a
                 href="https://lichess.org/@/ubeyidah"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-between gap-2 px-4 py-3 text-sm font-medium transition-colors hover:bg-accent"
+                className="flex h-full items-center justify-between gap-2 px-4 text-sm font-medium transition-colors hover:bg-accent"
               >
                 <span>Challenge me on Lichess</span>
                 <HugeiconsIcon icon={ExternalLink} size={16} />
@@ -77,7 +77,7 @@ export default async function HobbySection() {
                     );
                   })}
                 </div>
-                <div className="flex min-h-12 flex-wrap items-center gap-x-6 gap-y-2 px-4 py-3 text-sm text-muted-foreground">
+                <div className="flex h-12 items-center justify-between gap-2 px-4 text-sm text-muted-foreground">
                   <span>
                     {profile.count?.all?.toLocaleString() ?? "—"} games played
                   </span>
