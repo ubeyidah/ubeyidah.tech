@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
+import HobbySection from "@/components/HobbySection";
 import AchievementsSection from "@/components/AchievementsSection";
 import GitHubGraph from "@/components/GitHubGraph";
 import ProjectsSection from "@/components/ProjectsSection";
@@ -22,6 +23,7 @@ export default function Page() {
           <div className="mx-auto max-w-5xl border-x">
             <HeroSection />
             <AboutSection />
+            <HobbySection />
             <Suspense fallback={<GitHubGraphFallback />}> 
               <GitHubGraph />
             </Suspense>
