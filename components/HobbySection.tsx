@@ -64,7 +64,7 @@ export default async function HobbySection() {
               </p>
             </div>
             {profile ? (
-              <>
+              <div className="mt-auto">
                 <div className="grid grid-cols-3 divide-x border-b">
                   {formats.map(({ key, label }) => {
                     const perf = profile.perfs?.[key];
@@ -86,7 +86,7 @@ export default async function HobbySection() {
                   </span>
                   <span>Updated from Lichess</span>
                 </div>
-              </>
+              </div>
             ) : (
               <div className="flex flex-1 items-center p-4 py-8">
                 <p className="text-sm leading-relaxed text-muted-foreground">

@@ -23,7 +23,6 @@ export default function Page() {
           <div className="mx-auto max-w-5xl border-x">
             <HeroSection />
             <AboutSection />
-            <HobbySection />
             <Suspense fallback={<GitHubGraphFallback />}> 
               <GitHubGraph />
             </Suspense>
@@ -35,6 +34,9 @@ export default function Page() {
       </div>
       <AnimatedSection delay={300}>
         <ProjectsSection featuredOnly />
+      </AnimatedSection>
+      <AnimatedSection delay={325}>
+        <HobbySection />
       </AnimatedSection>
       <div className="section-connector border-x border-input" />
       <AnimatedSection delay={350}>
