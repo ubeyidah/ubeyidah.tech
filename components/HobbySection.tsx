@@ -15,12 +15,9 @@ export default async function HobbySection() {
     <section id="hobbies">
       <div className="mx-auto h-full max-w-5xl border-x">
         <div className="flex grow flex-col justify-center border-b bg-linear-to-br from-muted/40 via-background to-muted/20 px-4 py-16 md:items-center">
-          <div className="mb-3 text-5xl leading-none text-primary" aria-hidden="true">
-            ♞
-          </div>
-          <h2 className="text-3xl font-bold md:text-4xl">Beyond the Code</h2>
+          <h2 className="text-3xl font-bold md:text-4xl">Hobby</h2>
           <p className="mb-5 text-base text-muted-foreground">
-            A little friendly competition on the board
+            Beyond the Code
           </p>
         </div>
 
@@ -64,7 +61,7 @@ export default async function HobbySection() {
               </p>
             </div>
             {profile ? (
-              <div className="mt-auto">
+              <div className="mt-auto border-t">
                 <div className="grid grid-cols-3 divide-x border-b">
                   {formats.map(({ key, label }) => {
                     const perf = profile.perfs?.[key];
@@ -80,7 +77,7 @@ export default async function HobbySection() {
                     );
                   })}
                 </div>
-                <div className="flex flex-wrap gap-x-6 gap-y-2 p-4 text-sm text-muted-foreground">
+                <div className="flex min-h-12 flex-wrap items-center gap-x-6 gap-y-2 px-4 py-3 text-sm text-muted-foreground">
                   <span>
                     {profile.count?.all?.toLocaleString() ?? "—"} games played
                   </span>
